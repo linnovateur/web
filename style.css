@@ -1,0 +1,15 @@
+.text-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 75vh
+}
+.flag {
+	transition: opacity 0.5s ease, transform 0.5s ease;
+	margin: 10px;
+	opacity: 0.5;
+}
+.flag:hover {
+	opacity: 1;
+	transform: rotate(5deg) scale(1.2);
+}
