@@ -13,13 +13,13 @@
     flex-shrink: 1;
     flex-basis: auto;
     align-self: auto;
-    margin: 50px;
+    margin: 25px;
     margin-top:10px;
 
     background-color: rgba(35, 36, 40, 0.75);
     text-align: center;
     cursor: pointer;
-    width: 100px;
+    width: 150px;
     height: 50px;
 
     transition: opacity 0.5s ease, transform 0.5s ease;
