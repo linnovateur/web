@@ -5,12 +5,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linnovateur::Error</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./pages//global//style.css" />
-    <link rel="stylesheet" href="./pages//global//dialog.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap");
+
+    html {
+      color: white;
+      background-color: #313338;
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    .ok {
+      cursor: pointer;
+    }
+    .no {
+      cursor: not-allowed;
+      filter: grayscale(100%);
+    }
+  </style>
 
   <body>
     <noscript>
@@ -24,27 +39,53 @@
         его.<br /><br />
       </div>
     </noscript>
-    <div align="center">
+    <div align="center" style="display: none" id="404">
       <h1>Erreur 404</h1>
       <h1>Error 404</h1>
       <h1>Ошибка 404</h1>
 
       <p>
-        Et bien... sait étrange... vous aller être rediriger dans 30 secondes
-        (ou moin) verre la sélection de langue
+        Et bien... sait étrange... vous aller être rediriger dans
+        <span class="timmer">??</span> secondes (ou moin) verre la sélection de
+        langue
       </p>
       <p>
-        Well, that strange, you will be redirected in 30 secondes (or less) to
-        the language selection
+        Well, that strange, you will be redirected in
+        <span class="timmer">??</span> secondes (or less) to the language
+        selection
       </p>
       <p>
         Bueno... conocimiento extraño... serás redirigido al cristal de
-        selección de idioma en 30 segundos (o menos).
+        selección de idioma en <span class="timmer">??</span> segundos (o
+        menos).
       </p>
       <p>
-        Что ж... странное знание... через 30 секунд (или меньше) вы будете
-        перенаправлены к стеклу выбора языка.
+        Что ж... странное знание... через <span class="timmer">??</span> секунд
+        (или меньше) вы будете перенаправлены к стеклу выбора языка.
       </p>
     </div>
   </body>
 </html>
+<script>
+  $("title").text("Linnovateur::Error");
+
+  function wait(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  async function main() {
+    $("#404").fadeIn(1_000);
+    await wait(1_000);
+    a = 10;
+    while (a != -1) {
+      $(".timmer").text(a);
+      a = a - 1;
+      await wait(1_000);
+    }
+
+    $("html").fadeOut(1_000);
+    await wait(1_000);
+    window.location.href = "https://linnovateur.github.io/web/";
+  }
+  main();
+</script>
