@@ -60,7 +60,7 @@ $("#project").click(async function () {
       dialogClass: "no-close",
       buttons: [
         {
-          text: "OK",
+          text: "ХОРОШО",
           click: function () {
             $(this).dialog("close");
           },
@@ -78,7 +78,7 @@ $("#contact").click(async function () {
       dialogClass: "no-close",
       buttons: [
         {
-          text: "OK",
+          text: "ХОРОШО",
           click: function () {
             $(this).dialog("close");
           },
@@ -96,7 +96,7 @@ $("#exit").click(async function () {
       dialogClass: "no-close",
       buttons: [
         {
-          text: "OK",
+          text: "ХОРОШО",
           click: function () {
             $(this).dialog("close");
           },
