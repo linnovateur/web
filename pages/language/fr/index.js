@@ -54,8 +54,8 @@ $("#about").click(async function () {
 
 $("#project").click(async function () {
   if (await redirectToPage("./project/index.html")) {
-    $("#about").removeClass("ok");
-    $("#about").addClass("no");
+    $("#project").removeClass("ok");
+    $("#project").addClass("no");
     $("#dialog_err").dialog({
       dialogClass: "no-close",
       buttons: [
@@ -71,7 +71,7 @@ $("#project").click(async function () {
 });
 
 $("#contact").click(async function () {
-  if (await redirectToPage("./project/index.html")) {
+  if (await redirectToPage("./contact/index.html")) {
     $("#contact").removeClass("ok");
     $("#contact").addClass("no");
     $("#dialog_err").dialog({

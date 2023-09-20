@@ -42,7 +42,7 @@ $("#about").click(async function () {
       dialogClass: "no-close",
       buttons: [
         {
-          text: "OK",
+          text: "ХОРОШО",
           click: function () {
             $(this).dialog("close");
           },

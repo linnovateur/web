@@ -1,11 +1,11 @@
 .flex-container {
     display: inline-flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: normal;
     align-content: center;
-}
+  }
 
 .button {
 
@@ -13,13 +13,13 @@
     flex-shrink: 1;
     flex-basis: auto;
     align-self: auto;
-    margin: 50px;
+    margin: 25px;
     margin-top:10px;
 
     background-color: rgba(35, 36, 40, 0.75);
     text-align: center;
     cursor: pointer;
-    width: 100px;
+    width: 250px;
     height: 50px;
 
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -30,4 +30,13 @@
 .button:hover {
     opacity: 1;
 	transform: rotate(5deg) scale(1.2);
+}
+
+.ok {
+    cursor: pointer;
+}
+.no {
+    cursor: not-allowed;
+    filter: grayscale(50%);
+    background-color: brown;
 }

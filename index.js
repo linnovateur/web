@@ -83,36 +83,40 @@ $("#FR").click(async function () {
   }
 });
 
-$("#RU").click(function () {
-  $("#RU").removeClass("ok");
-  $("#RU").addClass("no");
-  $("#dialog_ru").dialog({
-    dialogClass: "no-close",
-    buttons: [
-      {
-        text: "ХОРОШО",
-        click: function () {
-          $(this).dialog("close");
+$("#RU").click(async function () {
+  if (await redirectToPage("./pages/language/ru/index.html")) {
+    $("#RU").removeClass("ok");
+    $("#RU").addClass("no");
+    $("#dialog_ru").dialog({
+      dialogClass: "no-close",
+      buttons: [
+        {
+          text: "ХОРОШО",
+          click: function () {
+            $(this).dialog("close");
+          },
         },
-      },
-    ],
-  });
+      ],
+    });
+  }
 });
 
-$("#ESP").click(function () {
-  $("#ESP").removeClass("ok");
-  $("#ESP").addClass("no");
-  $("#dialog_esp").dialog({
-    dialogClass: "no-close",
-    buttons: [
-      {
-        text: "OK",
-        click: function () {
-          $(this).dialog("close");
+$("#ESP").click(async function () {
+  if (await redirectToPage("./pages/language/esp/index.html")) {
+    $("#ESP").removeClass("ok");
+    $("#ESP").addClass("no");
+    $("#dialog_esp").dialog({
+      dialogClass: "no-close",
+      buttons: [
+        {
+          text: "OK",
+          click: function () {
+            $(this).dialog("close");
+          },
         },
-      },
-    ],
-  });
+      ],
+    });
+  }
 });
 
 main();

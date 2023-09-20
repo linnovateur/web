@@ -1,0 +1,8 @@
+    #accordion h3.ui-state-active {
+    background-color: rgba(88, 101, 242, 0.5);
+  }
+  
+  #accordion h3 {
+    background-color: rgba(30, 31, 34, 0.5);
+    cursor : pointer;
+  }
