@@ -1,15 +1,15 @@
-.text-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 75vh
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
+
+html {
+    color: white;
+    background-color: #313338;
+    font-family: 'JetBrains Mono', monospace;
 }
-.flag {
-	transition: opacity 0.5s ease, transform 0.5s ease;
-	margin: 10px;
-	opacity: 0.5;
+
+.ok {
+    cursor: pointer;
 }
-.flag:hover {
-	opacity: 1;
-	transform: rotate(5deg) scale(1.2);
+.no {
+    cursor: not-allowed;
+    filter: grayscale(100%);
 }
